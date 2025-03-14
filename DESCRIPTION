@@ -1,0 +1,17 @@
+Package: npranov
+Title: Kernel Ridge Regression and Visualization
+Version: 0.1.0
+Authors@R: person("Group", "03", email = "amiduyohan@gmail.com", role = c("aut", "cre"))
+Description: Perform kernel ridge regression, ANOVA, and visualization.
+Depends: R (>= 4.0)
+Imports:
+    kernlab,
+    ggplot2,
+    Matrix
+Suggests:
+    testthat
+License: MIT
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.3.2
+
