@@ -177,8 +177,11 @@ krss <- function(response, A, B, n_perm = 1000) {
     row.names = c(deparse(substitute(A)), deparse(substitute(B)), "Interaction")
   )
 
-  print(anova_results)
-  cat("\nSignificance Level = 0.05 '***'\n")
+ # Return the results as a list
+  return(list(
+    anova_table = anova_results,
+    optimal_sigma = optimal_sigma
+  ))
 }
 
 
