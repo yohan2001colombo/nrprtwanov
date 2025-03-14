@@ -54,7 +54,7 @@ interaction_plot <- function(data, factor1, factor2, response) {
   # Function body
 }
 
-Krss <- function(response, A, B, n_perm = 1000) {
+krss <- function(response, A, B, n_perm = 1000) {
   library(kernlab)
   library(Matrix)
   # For matrix operations
