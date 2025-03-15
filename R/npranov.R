@@ -190,7 +190,7 @@ main_effect_boxplot <- function(data, factor, response, title) {
   ggplot(data, aes_string(x = factor, y = response)) +
     geom_boxplot(fill = "skyblue", color = "black") +
     theme_minimal() +
-    labs(title = title, x = factor, y = deparse(substitute(response)))
+    labs(title = title, x = deparse(substitute(factor)), y = deparse(substitute(response)))
 }
 
 interaction_plot <- function(data, factor1, factor2, response) {
@@ -199,7 +199,7 @@ interaction_plot <- function(data, factor1, factor2, response) {
     stat_summary(fun = mean, geom = "line", size = 1) +
     stat_summary(fun = mean, geom = "point", size = 3) +
     theme_minimal() +
-    labs(title = "Interaction Plot", x = factor1, y = deparse(substitute(response)), color = factor2)
+    labs(title = "Interaction Plot", x = deparse(substitute(factor1)), y = deparse(substitute(response)), color = deparse(substitute(factor2)))
 }
 #set.seed(123)
 #soil_type <- factor(rep(c("Sandy", "Clay", "Loamy"), each = 30))  # Soil type (3 levels)
