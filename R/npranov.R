@@ -190,7 +190,7 @@ main_effect_boxplot <- function(data, factor, response, title) {
   ggplot(data, aes_string(x = factor, y = response)) +
     geom_boxplot(fill = "skyblue", color = "black") +
     theme_minimal() +
-    labs(title = title, x = deparse(substitute(factor)), y = deparse(substitute(response)))
+    labs(title = title, x = factor, y = deparse(substitute(response)))
 }
 
 interaction_plot <- function(data, factor1, factor2, response) {
